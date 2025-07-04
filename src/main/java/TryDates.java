@@ -52,6 +52,18 @@ public class TryDates {
           p = Period.between(start, end);
           System.out.println("p = " + p);
 
+          // create a period of 3007 days
+          Period p1 = Period.ofDays(3007);
+          // end is start, advanced by p1
+          end = start.plus(p1);
+          // print it out
+          System.out.println("end = " + end);
+          // same 8y2m24d result as above
+          System.out.println("Difference is " + Period.between(start, end));
+
+          p1 = p1.normalized();
+
+          System.out.println(p1);
      }
 
 }
